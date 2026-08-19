@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photography Gallery</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- decorative film-sprocket strip -->
+<div class="sprockets top">
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<header>
+  <div class="eyebrow">2026</div>
+  <h1> Gallery, <em>selected frames</em></h1>
+  <p class="sub">
+    Twenty-four exposures pulled from four rolls shot across mountains, cities,
+    wilderness and stairwells. Click any frame to view it full-size on the light table.
+  </p>
+  <div class="roll-meta">
+    <div><strong></strong>frames total</div>
+    <div><strong>4</strong>categories</div>
+    <div><strong>35mm</strong>equivalent</div>
+    <div><strong></strong>stock</div>
+  </div>
+</header>
+
+<!-- category filter buttons get injected here by script.js -->
+<nav class="filters" id="filters"></nav>
+
+<main>
+  <!-- gallery grid gets injected here by script.js -->
+  <div class="grid" id="grid"></div>
+</main>
+
+<div class="sprockets bottom">
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<footer> a gallery study — built with HTML, CSS &amp; vanilla JS</footer>
+
+<!-- ============ lightbox ============ -->
+<div class="lightbox" id="lightbox">
+  <div class="lb-stage">
+    <button class="lb-arrow prev" id="lbPrev" aria-label="Previous image">‹</button>
+    <img id="lbImg" src="" alt="">
+    <button class="lb-arrow next" id="lbNext" aria-label="Next image">›</button>
+    <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+  </div>
+  <div class="lb-info">
+    <div>
+      <div class="cat" id="lbCat"></div>
+      <div class="ttl" id="lbTtl"></div>
+    </div>
+    <div class="counter" id="lbCounter"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
